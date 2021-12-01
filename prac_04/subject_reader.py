@@ -9,6 +9,7 @@ FILENAME = "subject_data"
 def main():
     data = get_data()
     print(data)
+    display_subject_details(data)
 
 
 def get_data():
@@ -28,6 +29,11 @@ def get_data():
         # print("----------")
     input_file.close()
     return subjects
+
+
+def display_subject_details(sub_info):
+    for subject in sub_info:
+        print("{:6} is taught by {:^12} and has {:3d} students".format(subject[0], subject[1], subject[2]))
 
 
 main()
