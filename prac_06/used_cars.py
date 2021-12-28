@@ -15,5 +15,20 @@ def main():
     print("Car {}, {}".format(my_car.fuel, my_car.odometer))
     print("Car {self.fuel}, {self.odometer}".format(self=my_car))
 
+    # 1. Create a new Car object called "limo" that is initialised with 100 units of fuel.
+    limo = Car(100)
+
+    # Add 20 more units of fuel to this new car object using the add method.
+    limo.add_fuel(20)
+
+    # 3. Print the amount of fuel in the car.
+    print(f"Amount of fuel: {limo.fuel} units")
+
+    # 4. Attempt to drive the car 115 km using the drive method.
+    limo.drive(115)
+
+    # 5. Print the car's odometer reading.
+    print(f"Odometer reading: {limo.odometer}")
+
 
 main()
