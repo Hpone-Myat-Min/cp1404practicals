@@ -6,7 +6,7 @@ from prac_06.car import Car
 
 def main():
     """Demo test code to show how to use car class."""
-    my_car = Car(180)
+    my_car = Car("Land Rover", 180)
     my_car.drive(30)
     print("fuel =", my_car.fuel)
     print("odo =", my_car.odometer)
@@ -16,7 +16,7 @@ def main():
     print("Car {self.fuel}, {self.odometer}".format(self=my_car))
 
     # 1. Create a new Car object called "limo" that is initialised with 100 units of fuel.
-    limo = Car(100)
+    limo = Car("Splendid Limo", 100)
 
     # Add 20 more units of fuel to this new car object using the add method.
     limo.add_fuel(20)
@@ -29,6 +29,9 @@ def main():
 
     # 5. Print the car's odometer reading.
     print(f"Odometer reading: {limo.odometer}")
+
+    # 8. print your car object/s to make sure that the __str__ method is working as expected.
+    print(limo)
 
 
 main()
