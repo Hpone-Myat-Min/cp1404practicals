@@ -49,7 +49,7 @@ def get_valid_input(prompt):
     while not valid_input:
         try:
             user_input = int(input(prompt))
-            if user_input > 0:
+            if user_input >= 0:
                 valid_input = True
                 return user_input
             else:
