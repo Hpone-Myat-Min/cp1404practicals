@@ -1,0 +1,24 @@
+BoxLayout:
+    orientation: "vertical"
+
+    BoxLayout:
+        orientation: "horizontal"
+        TextInput:
+            id: input_num
+            text: " "
+            font_size: 20
+            on_text_validate: app.convert_to_km()
+        BoxLayout:
+            orientation: "vertical"
+            Button:
+                text: "Up"
+                font_size: 20
+                on_press: app.handle_increment(input_num.text, 1)
+            Button:
+                text: "Down"
+                font_size: 20
+                on_press: app.handle_increment(input_num.text, -1)
+
+    Label:
+        text: app.output_result
+        font_size: 30
